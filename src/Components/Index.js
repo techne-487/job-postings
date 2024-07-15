@@ -24,7 +24,7 @@ const Index = () => {
         <div className="container">
 
             {
-                users.slice(-10).map((curElem) => {
+                users.slice(-10).sort((a, b) => b - a).map((curElem) => {
                     return (
 
                         <div className="card_item" key={curElem.id}>
