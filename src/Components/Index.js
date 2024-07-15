@@ -24,7 +24,7 @@ const Index = () => {
         <div className="container">
 
             {
-                users.map((curElem) => {
+                users.slice(-10).map((curElem) => {
                     return (
 
                         <div className="card_item" key={curElem.id}>
