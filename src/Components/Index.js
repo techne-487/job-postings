@@ -7,7 +7,7 @@ const Index = () => {
 
 
     const getUsers = async () => {
-        const response = await fetch("https://api.github.com/users");
+        const response = await fetch("https://6695337a4bd61d8314ca77fe.mockapi.io/jobs/list");
         const FinalData = await response.json();
         setUsers(FinalData)
     }
@@ -20,33 +20,32 @@ const Index = () => {
 
 
     return (
-      
-            <div className="container">
-               
-                {
-                    users.map((curElem) => {
-                        return (
 
-                            <div className="card_item" key={curElem.id}>
-                                <div className="card_inner">
-                                    <img src={curElem.avatar_url} alt="" />
-                                    <div className="userName">{curElem.login}</div>
-                                    <div className="userUrl">{curElem.url}</div>
-                                    <div className="detail-box">
+        <div className="container">
 
-                                        <div className="gitDetail"><span>Articles</span>23</div>
-                                        <div className="gitDetail"><span>Following</span>45</div>
-                                        <div className="gitDetail"><span>Followers</span>11</div>
-                                    </div>
-                                    <button className="seeMore">See More</button>
+            {
+                users.map((curElem) => {
+                    return (
+
+                        <div className="card_item" key={curElem.id}>
+                            <div className="card_inner">
+                                <img src={curElem.imgurl} alt="" />
+                                <div className="userName">{curElem.role}</div>
+                                <div className="userUrl">{curElem.company}</div>
+                                <div className="detail-box">
+
+                                    <div className="gitDetail"><span>Eligiblity: {curElem.eligiblity}</span></div>
+
                                 </div>
-
+                                <a href={curElem.url}> <button className="seeMore">See More</button></a>
                             </div>
-                        )
-                    })
-                }
 
-            </div>              
+                        </div>
+                    )
+                })
+            }
+
+        </div>
 
 
     )
