@@ -12,7 +12,7 @@ const Index = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("https://docs.google.com/spreadsheets/d/1zNXUMhBpCzx4aG6aW2ZW0RxoSgK2tX6saEN_5bxz8PQ/edit?usp=sharing");
+                const response = await fetch("");
                 const buffer = await response.arrayBuffer();
                 const workbook = XLSX.read(buffer, { type: 'array' });
                 const sheetName = workbook.SheetNames[0];
