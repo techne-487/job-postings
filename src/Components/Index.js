@@ -37,7 +37,7 @@ const Index = () => {
                                     <div className="gitDetail"><span>Eligiblity: {curElem.eligiblity}</span></div>
 
                                 </div>
-                                <a href={curElem.url}> <button className="seeMore">See More</button></a>
+                                <a href={curElem.url}> <button className="seeMore">Apply Link</button></a>
                             </div>
 
                         </div>
