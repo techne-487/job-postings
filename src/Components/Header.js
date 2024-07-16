@@ -8,7 +8,7 @@ export default function Header() {
 		
         <div>
           	<nav class="navigation">
-			  <h1> git users</h1>
+			  <h1> Tech Stack | Job Postings</h1>
 		</nav>
 		
         </div>
